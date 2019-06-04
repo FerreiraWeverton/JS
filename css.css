@@ -1,0 +1,409 @@
+.image {
+    transition: transform .8s ease;
+}
+
+.elementor-animation-float:hover .image {
+    transform: translateY(-16px);
+    transition: transform 1s ease;
+}
+
+.elementor-animation-float-right {
+    transition: all 0.8s ease;
+}
+
+.elementor-animation-float-right:hover {
+    transform: translateX(8px);
+    transition: all 0.8s ease;
+}
+
+.elementor-toggle .elementor-tab-content .elemertor-active {
+    display: block;
+}
+
+
+/* ESTILOS DA TIMELINE */
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+/* Ajuste de posicionamento dos itens superiores */
+
+.cd-h-timeline__adjust-dates-position {
+    position: absolute;
+    left: -260px;
+}
+
+
+/* Itens da linha do tempo superior */
+
+.js .cd-h-timeline__container {
+    /* container da linha do tempo */
+    position: relative;
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.js .cd-h-timeline__dates {
+    /* estilo das datas */
+    position: relative;
+    height: 125%;
+    margin: 0 40px;
+    overflow: hidden;
+    font-family: "Ubuntu";
+}
+
+.js .cd-h-timeline__dates::after,
+.js .cd-h-timeline__dates::before {
+    /* Efeito de desfoque */
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    width: 20px;
+}
+
+.js .cd-h-timeline__dates::before {
+    /* Efeito de desfoque do lado esquerdo */
+    left: 0;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    /* gradiente cinza claro para transparent */
+}
+
+.js .cd-h-timeline__dates::after {
+    /* Efeito de desfoque do lado direito */
+    right: 0;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    /* gradiente cinza claro para transparent */
+}
+
+.js .cd-h-timeline__date::after {
+    /* Bolinha Padrão */
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -5px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border-width: 2px;
+    /* tamanho da borda */
+    border-style: solid;
+    border-color: #395F6F;
+    /* cor da borda (cinza) */
+    background-color: #ffffff;
+    /* cor do preencimento (branco) */
+    transition: background-color 0.3s, border-color .3s;
+    top: -5px;
+}
+
+.js .cd-h-timeline__date--selected::after {
+    /* Bolinha Selecionada */
+    background-color: #E31B6A;
+    /* cor do preencimento (verde) */
+    border-color: #E31B6A;
+    /* cor da borda (verde) */
+}
+
+.js .cd-h-timeline__date--older-event::after {
+    /* Bolinha Evento passado */
+    border-color: #E31B6A;
+    /* cor da borda (verde) */
+}
+
+.js .cd-h-timeline__date:hover::after {
+    /* Bolinha em hover mouse sobre ela) */
+    background-color: #E31B6A;
+    /* cor do preencimento (verde) */
+    border-color: #E31B6A;
+    /* cor da borda (verde) */
+}
+
+.js .cd-h-timeline__date {
+    /* estilo da data */
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-size: 15px;
+    /* tamanho da fonte */
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
+    color: #395F6F;
+    /* cor da fonte */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Ubuntu";
+    width: 200px;
+}
+
+.js .cd-h-timeline__line {
+    /* estilo da linha */
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 49px;
+    height: 2px;
+    background-color: #395F6F;
+    /* cor do preencimento (cinza) */
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.js .cd-h-timeline__filling-line {
+    /* estilo da linha colorida */
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #E31B6A;
+    /* Cor de preenchimento */
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.js .cd-h-timeline__navigation {
+    /* estilo dos botões de navegação */
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 34px;
+    /* altura */
+    width: 34px;
+    /* largura */
+    border-radius: 50%;
+    border-width: 2px;
+    /* tamanho da borda */
+    border-style: solid;
+    border-color: #dfdfdf;
+    /* cor da borda (cinza) */
+    transition: border-color 0.3s;
+}
+
+.js .cd-h-timeline__navigation:hover {
+    /* estilo dos botões no hover (mouse sobre ele) */
+    border-color: #E31B6A;
+    /* cor da borda (verde) */
+}
+
+.js .cd-h-timeline__navigation--next {
+    /* estilo do botão próximo */
+    right: 0;
+}
+
+.js .cd-h-timeline__navigation--prev {
+    /* estilo do botão anterior */
+    left: 0;
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -ms-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.js .cd-h-timeline__navigation--inactive {
+    /* estilo do botão inativo */
+    cursor: not-allowed;
+}
+
+.js .cd-h-timeline__navigation::after {
+    /* estilo da seta */
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    color: #395F6F;
+    background: url(http://webapp93469.ip-45-56-73-4.cloudezapp.io/wp-content/uploads/2019/06/cd-arrow3.svg) no-repeat 0 0;
+}
+
+.text--replace {
+    /* ocultar o texto */
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+
+/* Eventos da linha do tempo */
+
+.js .cd-h-timeline__event {
+    /* estilo do evento */
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 100px;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    padding: 1px 5%;
+    opacity: 0;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.js .cd-h-timeline__event--selected {
+    /* estilo do evento ativo */
+    position: relative;
+    top: 0;
+    z-index: 2;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.js .cd-h-timeline__event-content {
+    /* Conteúdo do evento */
+    max-width: 1900px;
+    padding-top: 80px;
+    padding-right: 150px;
+    margin: 0 auto;
+    font-family: "Ubuntu" color: #022331;
+    font-size: 17px;
+}
+
+.js .cd-h-timeline__event-title {
+    /* Estilo do título do evento */
+    color: #383838;
+    font-weight: 700;
+    font-size: 25px;
+    color: #395F6F;
+    font-family: "Ubuntu";
+}
+
+.js .cd-h-timeline__event-description {
+    /* Estilo da descrição */
+}
+
+.js .cd-h-timeline__event-date {
+    /* Data do evento */
+}
+
+
+/* Animações de transição */
+
+@-webkit-keyframes cd-enter-right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@keyframes cd-enter-right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@-webkit-keyframes cd-enter-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@keyframes cd-enter-left {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@-webkit-keyframes icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+.js .cd-h-timeline__event--enter-right,
+.js .cd-h-timeline__event--leave-right {
+    -webkit-animation-name: cd-enter-right;
+    animation-name: cd-enter-right
+}
+
+.js .cd-h-timeline__event--enter-left,
+.js .cd-h-timeline__event--leave-left {
+    -webkit-animation-name: cd-enter-left;
+    animation-name: cd-enter-left
+}
+
+.js .cd-h-timeline__event--leave-right,
+.js .cd-h-timeline__event--leave-left {
+    animation-direction: reverse
+}
+
+.icon--is-spinning {
+    -webkit-animation: icon-spin 1s infinite linear;
+    animation: icon-spin 1s infinite linear
+}
