@@ -166,7 +166,7 @@ ul {
     /* estilo da linha colorida */
     position: absolute;
     z-index: 1;
-    left: 0;
+    left: -260px;
     top: 0;
     height: 100%;
     width: 100%;
