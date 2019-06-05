@@ -44,8 +44,8 @@
 		}
 		
 		// set line/filling line dimensions
-    timeline.line.style.width = (timeline.eventsMinDistance)+'px';
-		timeline.lineLength = timeline.eventsMinDistance;
+    timeline.line.style.width = (left + timeline.eventsMinDistance)+'px';
+		timeline.lineLength = left + timeline.eventsMinDistance;
 		// reveal timeline
 		Util.addClass(timeline.element, 'cd-h-timeline--loaded');
 		selectNewDate(timeline, timeline.selectedDate);
