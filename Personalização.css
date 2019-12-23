@@ -5,7 +5,7 @@ body {
 	font-family: "Ubuntu", Maven Pro, Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p, li, a {
     font-family: inherit;
 }
 
@@ -23,8 +23,13 @@ body .contents .menu {
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
+.menu .container {
+    width: 100%;
+}
+
 .menu .row .links li { /* ITENS DO MENU */
     margin: 0 0 0 24px;
+    text-transform: uppercase;
 }
 
 .home .menu .container .row .links li a.item-menu { /* ITENS DO MENU */
@@ -79,6 +84,7 @@ li.top-menu-account { /* INFO DA CONTA */
 
 .hero-bg { /* Background 1ª layer - notebook */
     background: #fff;
+    position: relative;
 }
 
 .hero-bg:before { /* Background 2ª layer - serviços */
@@ -153,7 +159,7 @@ span.select2-selection.select2-selection--single:hover {
     width: 8px;
 }
 
-button.btn.home-hero-main-btn { /* BOTÃO PRINCIPAL */
+a.home-hero-main-btn { /* BOTÃO PRINCIPAL */
     background-color: #D12260;
     border-radius: 40px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.08);
