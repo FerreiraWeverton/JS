@@ -1,0 +1,214 @@
+/* IMEDICINA STYLE */
+
+/* TIPOGRAFIA */
+body {
+	font-family: "Ubuntu", Maven Pro, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    font-family: inherit;
+}
+
+/* HERO DA HOME */
+
+/* Menu */
+body .contents .menu {
+    position: fixed;
+    width: 1024px;
+    margin: 8px auto 0;
+    left: 0;
+    right: 0;
+    border-radius: 80px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.menu .row .links li { /* ITENS DO MENU */
+    margin: 0 0 0 24px;
+}
+
+.home .menu .container .row .links li a.item-menu { /* ITENS DO MENU */
+    color: #d12260 !important;
+}
+
+.menu .my-account-handler { /* INFO DA CONTA */
+    text-transform: lowercase;
+    display: block;
+    line-height: 0.8;
+}
+
+li.top-menu-account { /* INFO DA CONTA */
+    text-align: center;
+}
+
+.menu a.menu-btn { /* BOTÃO */
+    border-radius: 32px;
+    color: #d12260 !important;
+    background-color: transparent !important;
+    border: 2px solid #d12260;
+}
+
+.menu a.menu-btn:hover { /* BOTÃO */
+    background-color: #d12260 !important;
+    color: #ffffff !important;
+}
+
+.top-menu-cart .badge.js-cart-qty { /* INDICADOR */
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    background-color: rgba(0,0,0,0.08);
+    color: #d12260;
+}
+
+.top-menu-cart:hover .badge.js-cart-qty { /* INDICADOR */
+    color: #fff;
+}
+
+/* Container */
+.container.hero-contents {
+    width: 880px;
+    padding: 80px 0 80px;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-bg { /* Background 1ª layer - notebook */
+    background: #fff;
+}
+
+.hero-bg:before { /* Background 2ª layer - serviços */
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: slide-left 16s linear infinite;
+}
+
+@keyframes slide-left { /* Animação da layer 2 */
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+.hero-bg:after { /* Background 3ª layer - médica */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* Título */
+h1.home-hero-title {
+    letter-spacing: -2.4px;
+    line-height: 1;
+    font-size: 56px;
+}
+
+/* Slogan */
+h2.home-hero-slogan {
+    letter-spacing: -0.8px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* Formulário */
+.select2-selection { /* CAMPO */
+    height: 48px !important; /* Uso de important apenas porque o CSS original usa ¬¬ */
+}
+
+.select2-selection.select2-selection--single { /* CAMPO */
+    border: 2px solid #000; /* !!! Alterar - COR IMPROVISADA !!! */
+    transition: all 0.3s ease;
+}
+span.select2-selection.select2-selection--single:hover {
+    border: 2px solid #ffff00; /* !!! Alterar - COR IMPROVISADA !!! */
+    transition: all 0.3s ease;
+}
+
+.form-group .select2-container--default .select2-selection--single .select2-selection__rendered { /* PLACEHOLDER */
+    line-height: 44px; /* Tamanho do form menos largura das bordas superior e inferior */
+    padding: 0 16px !important;
+    color: rgba(0,0,0,0.56);
+}
+
+.form-group .select2-container--default .select2-selection--single .select2-selection__arrow { /* SETA */
+    height: 48px;
+    top: 0 !important; /* Uso de important apenas porque o CSS original usa ¬¬ */
+    right: 16px;
+    width: 8px;
+}
+
+button.btn.home-hero-main-btn { /* BOTÃO PRINCIPAL */
+    background-color: #D12260;
+    border-radius: 40px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    font-size: 15px;
+    text-transform: uppercase;
+    height: 48px;
+    transition: all 0.3s ease;
+}
+
+button.btn.home-hero-main-btn:hover { /* BOTÃO PRINCIPAL */
+    background-color: #BC1650;
+    transform: translateY(-8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 16px rgba(0,0,0,0.08);
+}
+
+.btn.home-hero-main-btn .fa { /* ÍCONE do botão */
+    margin-left: 8px;
+}
+
+a.home-hero-second-btn { /* BOTÃO SECUNDÁRIO */
+    background: none;
+    box-shadow: none;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+a.home-hero-second-btn:hover { /* BOTÃO SECUNDÁRIO */
+    background: none;
+}
+
+/* DEMAIS SEÇÕES */
+/* Título h2 */
+h2:not(.home-hero-slogan) {
+    font-size: 48px;
+    letter-spacing: -2.4px;
+    color: #38555f;
+}
+
+/* Título h3 */
+h3 {
+    letter-spacing: -1.6px;
+    color: #38555f !important;
+}
+
+p {
+    font-size: 16px !important;
+    letter-spacing: -0.4px;
+    line-height: 1.3;
+    color: rgba(56, 85, 95, 0.8) !important;
+    margin-bottom: 16px !important;
+}
+
+/* Espaçamento das seções */
+.howitworks, .best-sellers, .call-sellers, .misc-area {
+	padding: 160px 0;
+}
